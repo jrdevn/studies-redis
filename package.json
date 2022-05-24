@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "startDeveloper": "nodemon app.js",
+    "start": "node index.js"
+  },
   "dependencies": {
-    "ioredis": "^5.0.5"
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "ioredis": "^5.0.5",
+    "nodemon": "^2.0.16",
+    "redis": "^4.1.0"
   }
 }

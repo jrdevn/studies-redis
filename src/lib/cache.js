@@ -1,4 +1,4 @@
-const Redis = require('ioredis');
+import Redis from 'ioredis';
 
 class Cache {
 
@@ -27,8 +27,7 @@ class Cache {
     async delPreFix(prefix) { // aqui ele deleta pelos prefixos
         const keys =  (await this.redis.keys(`cache:${prefix}:*`)).map(key => 
             key.replace("cache: ", ""));
-
-        
+      
         return this.redis.del(keys); // cache:id:* 
 
     }
